@@ -1,0 +1,4 @@
+{
+  "name": "node-hbase-vs-thrift",
+  "description": "Benchmark scripts for testing node-hbase (REST) against node-thrift"
+}

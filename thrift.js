@@ -1,11 +1,12 @@
 var thrift = require('thrift');
 var async = require('async');
+var config = require('./config');
 
 var HBase = require('./gen-nodejs/Hbase'),
     HBaseTypes = require('./gen-nodejs/Hbase_types');
 
 var data = "dtrace: error on enabled probe ID 5 (ID 1673: io:mach_kernel:buf_strategy:start): illegal operation in action #3 at DIF offset 0";
-var connection = thrift.createConnection('localhost', 9090, { transport: thrift.TBufferedTransport });
+var connection = thrift.createConnection(config.THRIFT_HOST, config.THRIFT_PORT, { transport: thrift.TBufferedTransport });
 
 connection.on('connect', function () {
     client = thrift.createClient(HBase, connection);

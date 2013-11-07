@@ -1,4 +1,11 @@
 {
   "name": "node-hbase-vs-thrift",
-  "description": "Benchmark scripts for testing node-hbase (REST) against node-thrift"
+  "description": "Benchmark scripts for testing node-hbase (REST) against node-thrift",
+  "dependencies": {
+    "hbase": "~0.1.6",
+    "async": "~0.2.9",
+    "assert": "~0.4.9",
+    "thrift": "~0.9.1",
+	 "hbase-client": "git+http://github.com/falsecz/node-hbase-client#master"
+  }
 }

@@ -1,9 +1,9 @@
 var hbase = require('hbase');
 var async = require('async');
 var assert = require('assert');
+var config = require('./config.js');
 
-var client = new hbase.Client();
-
+var client = new hbase.Client({host: config.REST_HOST, port: config.REST_PORT});
 var table = client.getTable('t1' )
 
 // var data = require('fs').readFileSync('../daito-ryu.org/images/takeda_sokaku_1.jpg');

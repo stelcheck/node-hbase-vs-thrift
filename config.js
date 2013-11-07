@@ -1,0 +1,10 @@
+var config = {
+	THRIFT_HOST: "192.168.57.101",
+	THRIFT_PORT: 9091,
+
+	REST_HOST: "192.168.57.101",
+	REST_PORT: 8080,
+
+	ZOOKEEPER_QUORUM: ["192.168.57.101:2181"]
+}
+module.exports = config;
